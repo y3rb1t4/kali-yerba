@@ -14,6 +14,34 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/RobotoMono
 unzip Iosevka.zip -d ~/.local/share/fonts/
 unzip RobotoMono.zip -d ~/.local/share/fonts/
 
+##Postman
+
+wget https://dl.pstmn.io/download/latest/linux64 -O postman-linux-x64.tar.gz 
+sudo tar -xzf postman-linux-x64.tar.gz -C /opt
+sudo ln -s /opt/Postman/Postman /usr/bin/postman
+
+
+## configure pyenv virtualenv in kali linux
+
+## install mitmproxy2swagger
+
+sudo pip3 install mitmproxy2swagger
+
+## install docker in kali
+sudo apt-get install docker.io docker-compose
+
+## install Golang 
+
+ sudo apt install golang-go
+
+## install JSON web Token toolkit v2
+
+# cd /opt
+# sudo git clone https://github.com/ticarpi/jwt_tool.git
+# cd jwt_tool
+# python3 -m pip install termcolor cprint pycryptodomex requests
+# sudo chmod +x jwt_tool.py
+
 wget https://github.com/barnumbirr/alacritty-debian/releases/download/v0.10.0-rc4-1/alacritty_0.10.0-rc4-1_amd64_bullseye.deb
 sudo dpkg -i alacritty_0.10.0-rc4-1_amd64_bullseye.deb
 sudo apt install -f
@@ -36,6 +64,12 @@ cp .config/rofi/config ~/.config/rofi/config
 cp .fehbg ~/.fehbg
 cp .config/i3/clipboard_fix.sh ~/.config/i3/clipboard_fix.sh
 cp -r .wallpaper ~/.wallpaper 
+
+## install Owasp zap in kali linux
+
+sudo apt install zaproxy 
+
+
 
 echo "Done! Grab some wallpaper and run pywal -i filename to set your color scheme. To have the wallpaper set on every boot edit ~.fehbg"
 echo "After reboot: Select i3 on login, run lxappearance and select arc-dark"
